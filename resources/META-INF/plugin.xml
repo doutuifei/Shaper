@@ -1,0 +1,36 @@
+<idea-plugin>
+    <id>com.ekwing.shaper</id>
+    <name>Shaper</name>
+    <version>0.0.3</version>
+    <vendor email="lipeng@moyi365.com" url="http://gitlab.ekwing.com/mird/Android/library/shaper">翼课网</vendor>
+
+    <description><![CDATA[
+      auto rename drawable shape file name
+    ]]></description>
+
+    <change-notes><![CDATA[
+      0.0.3试用版本，支持多个文件和文件夹命名，支持自定义前缀
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="Shaper.Shaper" class="com.ekwing.shaper.ShaperAction" text="Shaper"
+                description="Auto rename shape drawable file">
+            <add-to-group group-id="RefactoringMenu" anchor="after" relative-to-action="RenameElement"/>
+        </action>
+    </actions>
+
+</idea-plugin>
